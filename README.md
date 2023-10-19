@@ -1,5 +1,5 @@
 # ABEXII
-Bem-vindo ao projeto da disciplina ABEXII!
+Repositorio de: Vitor Rodi
 
 ## Descrição:
 Este repositório contém todos os materiais e projetos relacionados ao projeto
