@@ -7,3 +7,6 @@ de software da disciplina ABEXII.
 
 ## Integrantes do Grupo:
 Vitor Rodi
+Edson Soares
+Bruno Guilherme Moura
+Daniel Moura
