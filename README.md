@@ -7,7 +7,7 @@ Atrasos em postos de saúde e longas esperas prejudicam a experiência dos pacie
 ## Integrantes do Grupo:
 Vitor Rodi,                                                 
 Edson Soares, 
-Bruno Guilherme Moura,
+Bruno Guilherme Moura,         
 Daniel Moura,
 
   
