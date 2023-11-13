@@ -10,7 +10,7 @@ Vitor Rodi <br>Edson Soares <br>Bruno Guilherme Moura <br> Daniel Moura
 <div style="width: 100%; border: 2px solid black; margin: 10px; padding: 10px;">  
   <table>  
     <tr> 
-      <td style="vertical-align: top;"> 
+      <td style="vertical-align: top;">  
         <img src="https://github.com/VitorRodi/Abex/blob/9830e77d5007d2fb9a6d8998fd935de992367480/BRASAO_UNO_AZUL.png" width="70" height="85" />
       </td>
       <td>
