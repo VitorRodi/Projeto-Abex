@@ -12,7 +12,7 @@ Vitor Rodi <br>Edson Soares <br>Bruno Guilherme Moura <br> Daniel Moura
     <tr>  
       <td style="vertical-align: top;">  
         <img src="https://github.com/VitorRodi/Abex/blob/9830e77d5007d2fb9a6d8998fd935de992367480/BRASAO_UNO_AZUL.png" width="70" height="85" />
-      </td> 
+      </td>  
       <td> 
         <h2>UNIVERSIDADE COMUNITÁRIA REGIONAL DE CHAPECÓ - UNOCHAPECÓ</h2>
         <p>ESCOLA POLITÉCNICA</p>
