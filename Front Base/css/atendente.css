@@ -1,0 +1,400 @@
+
+
+.table thead tr th, .table tbody tr td {
+    vertical-align: middle;
+}
+
+#titulo hr {
+    border-top: 1px solid #000
+}
+
+#titulo_topo {
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000
+}
+
+#titulo_rodape {
+    padding-top: 5px
+}
+
+#atendimento input {
+    width: 430px;
+    height: 45px;
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+#atendimento textarea {
+    width: 430px;
+    height: 100px;
+    margin-top: 15px
+}
+
+#sitomas {
+    width: 430px;
+    height: 25px;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.page #atendimento .title_icon {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 25px;
+}
+
+.selecione {
+    border: 1 px solid black;
+    color: blue;
+}
+
+
+/*SELECIONANDO AS TABELAS DE ATENDIMENTO*/
+
+#menu_usuario {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+
+#box_proximos_atendimentos {
+    width: 100%;
+    height: 60px;
+    background: #0063af;
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#box_proximos_ps {
+    width: 100%;
+    height: 60px;
+    background: #be1a19;
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#menu_opcoes {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border: 1px solid #0063af
+}
+
+#box_menu_opcoes {
+    width: 100%;
+    height: 60px;
+    background: #0063af;
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#menu_esquerda {
+    margin-top: 10px;
+}
+
+#menu_direita {
+    margin-top: 10px;
+}
+
+#agenda_especialidades {
+    width: 150px;
+    height: 50px;
+    background: #0063af;
+    color: #FFF;
+    padding: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 5px black;
+}
+
+#agenda_especialidades:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#pronto_socorro {
+    width: 100%;
+    height: 50px;
+    background: #be1a19;
+    color: #FFF;
+    padding: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 5px black;
+}
+
+#pronto_socorro:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#trocar_senha {
+    width: 150px;
+    height: 50px;
+    background: #0063af;
+    color: #FFF;
+    padding: 5px;
+    padding-top: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 5px black;
+}
+
+#trocar_senha:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#sair {
+    color: #be1a19;
+}
+
+.botao_confimacao {
+     width: 70%;
+    height: 70%;
+    background: #34AF9D;
+    color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #34BDA9;
+    padding: 6px 0px;
+}
+
+.botao_confimacao:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#sair {
+    color: #be1a19;
+}
+
+#menu_usuario table {
+    width: 100%;
+    text-align: center;
+}
+
+##menu_usuario th {
+    text-align: center;
+}
+
+
+/*SELECIONANDO O MENU DO USUÁRIO*/
+
+#menu_usuario {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+#agenda_profissionais {
+    width: 380px;
+    height: 70px;
+    border: 1px solid #0063af;
+    text-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 5px black;
+}
+
+#agenda_profissionais:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#box_agenda_profissionais {
+    height: 100%;
+    background: #0063af;
+    color: #FFF;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 1px black;
+}
+
+#proximos_atendimentos {
+    width: 380px;
+    height: 100%;
+}
+
+#proximos_atendimentos table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#proximos_atendimentos th {
+    text-align: center;
+}
+
+#proximos_atendimentos td {
+    text-align: center;
+}
+
+#box_proximos_atendimentos {
+    height: 40px;
+    background: #0063af;
+    color: #FFF;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#box_proximos_ps {
+    height: 40px;
+    background: #be1a19;
+    color: #FFF;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 7px;
+}
+
+
+#proximos_ps th {
+    text-align: center;
+}
+
+#proximos_ps td {
+    text-align: center;
+}
+
+/*SELECIONANDO A AGENDA POR ESPECIALIDADE*/
+
+#agenda {
+    width: px;
+    height: 100%;
+    margin-right: auto;
+    margin-right: auto;
+}
+
+#sel_data {    
+    margin-top: 5px;
+}
+
+#sel_data input {
+    width: 200px;
+    margin-left: 10px;
+}
+
+#sel_data spam {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#sel_especialidade {
+    width: 52%;
+    float: left;
+}
+
+#sel_especialidade select {
+    width: 150px;
+    height: 40px;    
+    margin-left: 10px;
+}
+
+#sel_especialidade spam {
+    font-size: 14px;
+    font-weight: bold
+}
+
+.especialidade {
+    width: 100%;
+    height: 45px;
+    background: #0063af;
+    color: #FFF;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 0px;
+    padding-left: 20px;
+}
+
+#agendamentos {
+    width: 766px;
+}
+
+
+#agendamentos tdpar {
+    background: #e6e6e6
+}
+
+.efeito:hover {
+    background: #0063af;
+    cursor: pointer;
+}
+
+#agendamentos tr {
+    width: 1050px;
+}
+
+div[data-especialidade] {
+    display: none;
+}
+
+.marcado {
+    background: #006600;
+}
+
+.vago {
+    background: #f2f2f2
+}
+
+.folga {
+    background: black;
+}
+
+.cancelado {
+    background: #be1a19;
+}
+
+
+/*SELECIONANDO A CONFIRMAÇÂO*/
+
+.confirma_panel {
+    position: fixed;
+    padding: 10px;
+    background: #fff;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -15%;
+    z-index: 3;
+    display: none;
+}
+
+/*SELECIONAOD A LISTA DE OCORRENCIAS*/
+#lista_ocorrecias table {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*SELECIONANDO A PAGINA ATUAL*/
+.pagina_atual {
+    font-weight: bold;
+}
+
+#sair:hover {
+    font-weight: bold;
+}

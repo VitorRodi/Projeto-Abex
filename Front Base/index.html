@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pre-triagem e Agendamento</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css?ver=1">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/media.css" media="screen and (max-width: 780px)" />
+
+
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <div class="main_bg_panel"></div>
+    <div class="help_panel">
+        <div class="help_content">
+            <span class="close">x</span>
+            <span class="icon-seta"></span>
+            <img class="modelocard" src="images/modelocard.png" alt="">
+        </div>
+    </div>
+    <header>
+        <div class="limit">
+            <a href="index.html"><img src="images/sus.png" class="logo" alt=""></a>
+        </div>
+    </header>
+    <menu>
+        <div class="limit">
+            <div class="menu">
+                <b>Sistema de Pré-triagem e Agendamento</b>
+            </div>
+        </div>
+    </menu>
+    <div class="content_middle">
+        <div class="limit">
+            <div class="page">
+                <div class="box_text">
+                    <h3><b>Clique na opção de atendimento que você deseja</b></h3> Para facilitar o acesso tenha em mãos o número do <b>Cartão Nacional de Saúde</b>
+                    <a href="javascript:help()">(onde encontro esse número?)</a>
+                </div>
+
+                <div class="pageinside left">
+                    <div onclick="window.location.href='usuario_pronto_socorro_index.html'" class="btn_main ps">
+                        <span class="icon-ps"></span>
+                        <b>Pronto socorro</b>
+                        <br> Atendimento sem hora marcada, urgência
+                    </div>
+                    <div onclick="window.location.href='usuario_login_agendamento.html'" class="btn_main ag">
+                        <span class="icon-ag"></span>
+                        <b>Agendar Consulta</b>
+                        <br> Atendimento com dia e hora marcada
+                    </div>
+                    <div onclick="window.location.href='usuario_codigo_consulta.html'" class="btn_main qr">
+                        <span class="icon-qrcode"></span>
+                        <b>Cód. Pronto Socorro</b>
+                        <br> Consultar o código de pré-triagem
+                    </div>
+                    <div onclick="window.location.href='usuario_login_lista_ocorrencias.html'" class="btn_main co">
+                        <span class="icon-co"></span>
+                        <b>Minhas Consultas</b>
+                        <br> Ver suas consultas agendadas
+                    </div>
+                </div>
+
+                <div class="pageinside">
+                    <div class="title_icon">
+                        <b>Entrar</b> <span class="icon-user"></span>
+                    </div>
+                    Se você já tem cadastro e deseja consultar seus agendamentos clique no botão para se logar
+                    <br>
+                    <input onclick="window.location.href='usuario_login.html'" type="button" value="LOGIN" class="btn btn-primary btn_green">
+                    <div class="title_icon">
+                        <b>Cadastre-se</b> <span class="icon-cad"></span>
+                    </div>
+                    Faça seu cadastro para agendar uma consulta na unidade do SUS mais próxima de sua casa
+                    <br>
+                    <input onclick="window.location.href='usuario_cadastro.html'" type="button" value="CADASTRAR" class="btn btn-primary btn_blue">
+                </div>
+
+                <div class="box_text">
+                    <div class="title_icon">
+                        Informações Úteis
+                    </div>
+                    <div class="box_rodape">
+                        <a href="http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/234-sgtes-p/sgtes/9630-universidade-aberta-do-sus" target="_blank">
+                            <img src="images/logo_portalsaude.png" alt="portal saude" title="portal saude">
+                        </a>
+                    </div>
+                    <div class="box_rodape">
+                        <img src="images/logo_136.png" alt="Disque saúde 136" title="Disque saúde 136">
+                    </div>
+                    <div class="box_rodape">
+                        <a href="https://portaldocidadao.saude.gov.br/portalcidadao/index.htm" target="_blank"><span class="portalSC">Portal de Saúde do Cidadão</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="limit">Sistema SUS &copy; Todos os direitos reservados</div>
+    </footer>
+
+</body>
+
+</html>

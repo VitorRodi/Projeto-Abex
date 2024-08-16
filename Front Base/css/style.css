@@ -1,0 +1,645 @@
+
+
+@font-face {
+    font-family: 'liberation_sansbold';
+    src: url('../fonts/liberationsans-bold.woff2') format('woff2'), url('../fonts/liberationsans-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '../fonts/liberation_sansbold_italic';
+    src: url('liberationsans-bolditalic.woff2') format('woff2'), url('../fonts/liberationsans-bolditalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '../fonts/liberation_sansitalic';
+    src: url('liberationsans-italic.woff2') format('woff2'), url('../fonts/liberationsans-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'liberation_sansregular';
+    src: url('../fonts/liberationsans-regular.woff2') format('woff2'), url('../fonts/liberationsans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'liberation_sansregular';
+    font-size: 12px;
+    color: #444;
+}
+
+b {
+    font-family: 'liberation_sansbold';
+}
+
+.menu b {
+    color: #fff;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    width: 100%;
+    padding: 15px 0px;
+}
+
+menu {
+    width: 100%;
+    background: #0063af;
+    padding: 0px;
+    margin: 0px;
+}
+
+.content_middle {
+    width: 100%;
+    min-height: 400px;
+}
+
+footer {
+    width: 100%;
+    padding: 10px 0px;
+    background: #0063af;
+}
+
+.main_bg_panel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    display: none;
+}
+
+.help_panel {
+    position: fixed;
+    padding: 10px;
+    background: #fff;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -15%;
+    z-index: 3;
+    display: none;
+}
+
+.help_content {
+    position: relative;
+    min-height: 360px;
+}
+
+.limit,
+.nav ul {
+    width: 800px;
+    margin: 0 auto;
+}
+
+footer .limit {
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+}
+
+.content_middle .limit {
+    height: 100%;
+}
+
+.page {
+    background: #fff;
+    min-height: 100%;
+}
+
+input,
+select {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px;
+    background: #f1f1f1;
+    border: 0px;
+    border-radius: 7px;
+}
+
+.form-group select {
+    margin: 0px;
+}
+
+input[type="radio"] {
+    width: auto;
+    height: auto;
+}
+
+.space_line {
+    width: 100%;
+    margin-top: 10px;
+    display: inline-table;
+}
+
+textarea {
+    font-size: 14px;
+    padding: 10px;
+    background: #f1f1f1;
+    border: 0px;
+    border-radius: 7px;
+}
+
+.box_sintomas input[type="text"],
+.box_sintomas select {
+    background: #fff;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+.menu {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 0px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+}
+
+.title_icon {
+    font-family: 'liberation_sansbold';
+    width: 100%;
+    padding: 3px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #444;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.title_icon b {
+    font-size: 20px;
+}
+
+.btn_blue {
+    border-radius: 0px;
+    margin: 10px 0px;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+.btn_blue:hover {
+    color: #fff;
+}
+
+.btn_green {
+    border-radius: 0px;
+    background: #159898;
+    color: #fff;
+    margin: 10px 0px;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+.btn_green:hover {
+    color: #fff;
+    background: #1bb8ba;
+}
+
+.portalSC {
+    padding: 10px;
+    background: #006837;
+    color: #fff;
+    display: block;
+    width: 190px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-shadow: 2px 2px 3px #000;
+    cursor: pointer;
+}
+
+.box_rodape a:hover {
+    text-decoration: none;
+}
+
+.box_text {
+    padding: 20px;
+    background: #f9f9f9;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.box_text h3 {
+    margin-top: 0px;
+    margin-bottom: 6px;
+}
+
+.box_text h3 b {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.box_rodape {
+    width: 33%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+    background: #f1f1f1;
+}
+
+.nav ul {
+    padding: 0px;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline-table;
+    padding: 10px 0px;
+    margin-left: -4px;
+}
+
+.nav ul li:hover {
+    background: #f9f9f9;
+}
+
+.nav ul li:last-child a {
+    border: 0px;
+}
+
+.nav ul li a {
+    padding: 5px 10px;
+    border-right: 1px solid #ccc;
+}
+
+.nav ul li a:hover {
+    text-decoration: none;
+}
+
+.box_atendimento {
+    color: #007a00;
+    padding: 15px 0px;
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    background: #f1f1f1;
+    line-height: 22px;
+    box-shadow: 0px 0px 8px #ccc;
+    border: 1px solid #fff;
+}
+
+.box_atendimento span {
+    font-size: 32px;
+    color: #007a00;
+}
+
+#atendimento {
+    width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#atendimento_finalizacao {
+    width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn_main.ps b {
+    font-size: 20px;
+    color: #be1a19;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.btn_main.ag b {
+    font-size: 20px;
+    color: #173e9d;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.btn_main.co b {
+    font-size: 20px;
+    color: #444;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.btn_main.qr b {
+    font-size: 20px;
+    color: #008900;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.btn_main {
+    width: 350px;
+    padding: 11px 8px 10px 64px;
+    color: #be1a19;
+    font-size: 12px;
+    position: relative;
+    line-height: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.ps {
+    color: #be1a19;
+    background: #fff3f3;
+}
+
+.ag {
+    color: #173e9d;
+    background: #eefafa;
+}
+
+.co {
+    color: #444;
+    background: #f7f7f7;
+}
+
+.qr {
+    color: #008900;
+    background: #e0ffe0;
+}
+
+.pageinside {
+    width: 50%;
+    float: right;
+}
+
+.pageinside.left {
+    float: left;
+}
+
+.modelocard {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 19px;
+    right: 41px;
+    z-index: 1;
+}
+
+.dados {
+    width: 100%;
+    background: #f8f8f8;
+    padding: 10px 11px 12px 10px;
+    box-sizing: border-box;
+    margin: 20px 0px;
+    text-align: left;
+}
+
+.break_form {
+    display: table;
+    width: 100%;
+}
+
+.form_ddd {
+    display: table-cell;
+    width: 75px;
+    padding-right: 10px;
+}
+
+.form_numero {
+    display: table-cell;
+    width: 100px;
+    padding-left: 10px;
+    padding-left: 10px;
+}
+
+.regiao {
+    display: none;
+}
+
+.unidade {
+    display: none;
+}
+
+.listunidade {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#titulo hr {
+    border-top: 1px solid #000
+}
+
+#titulo_topo {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000
+}
+
+#titulo_rodape {
+    padding-top: 5px
+}
+
+#atendimento textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 15px
+}
+
+.passo7 textarea {
+    background: #fff;
+}
+
+#sitomas {
+    width: 430px;
+    height: 25px;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.page #atendimento .title_icon {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 25px;
+}
+
+.box_sintomas {
+    background: #f1f1f1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.box_sintomas .btn-info,
+.box_sintomas .btn-success {
+    width: 40%;
+    display: inline-table;
+    margin-right: 10px;
+}
+
+.nav_sintomas {
+    width: 100%;
+    display: inline-table;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+#login {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+#triagem {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+#login_links {
+    width: 100%;
+    text-align: right;
+    margin-top: 5px;
+    padding: 3px;
+}
+
+#login_links a {
+    color: #0048ff;
+}
+
+#login_links a,
+#login_links {
+    font-size: 14px;
+}
+
+#atendimento h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.progress {
+    position: relative;
+}
+
+.progress-bar {
+    background-color: #64D6C5;
+}
+
+.textbarprogress {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 50%;
+    margin-left: -52px;
+    height: 20px;
+    color: #555;
+    padding: 2px 10px;
+}
+
+#atendimento_finalizacao img {
+    width: 100%;
+    height: auto;
+}
+
+.gf {
+    display: none;
+}
+
+.passo2,
+.passo3,
+.passo4,
+.passo5,
+.passo6,
+.passo7 {
+    display: none;
+}
+
+#voltar {
+    display: none;
+}
+
+.unidades {
+    width: 100%;
+    display: none;
+}
+
+.unidades h1 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.listuni {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.listuni h1 {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.dataunidade,
+#hora,
+#hi {
+    display: none;
+}
+
+#hi h1 {
+    margin: 0;
+    font-size: 16px;
+}
+
+#atendimento_finalizacao_agendamento .dados {
+    text-align: center;
+}
+
+#atendimento_finalizacao img, #atendimento_finalizacao_agendamento img {
+    width: 100%;
+    height: auto;
+}
+
+#atendimento_finalizacao h1, #atendimento_finalizacao_agendamento h1 {
+    font-size: 16px; 
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.help_content input {
+    text-align: center;
+}
+
+.imprimir img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pre-triagem e Agendamento</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/atendente.css">
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="limit">
+            <a href="index.html"><img src="images/sus.png" class="logo" alt=""></a>
+        </div>
+    </header>
+    <menu>
+        <div class="limit">
+            <div class="menu">
+                Sistema de Pré-triagem e Agendamento
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="atendente_desktop.html">Desktop</a></li>
+                <li><a href="atendente_agenda_especialidade.html">Agenda por Especialidade</a></li>
+                <li><a href="atendente_pronto_socorro.html">Tabela Completa de Pronto Socorro</a></li>
+                <li><a href="atendente_troca_senha.html">Trocar Senha</a></li>
+                <li>
+                    <a href="atendente_login.html">
+                        <spam id="sair">Sair</spam>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </menu>
+    <div class="content_middle">
+        <div class="limit">
+            <div class="page">
+                <div class="row" id="menu_usuario">
+
+                    <div class="col-md-12">
+                        <div id="box_proximos_ps"> Atendimentos Pronto Socorro</div>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Paciente</th>
+                                    <th>Hora prevista de chegada</th>
+                                    <th>Confirmação de entrada</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maria Eduarda</td>
+                                    <td>09:50</td>
+                                    <td>
+                                        <div class="botao_confimacao">Confirmar Entrada</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Antionio Carlos</td>
+                                    <td>10:15</td>
+                                    <td>
+                                        <div class="botao_confimacao">Confirmar Entrada</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rodrigo de Carvalho</td>
+                                    <td>10:40</td>
+                                    <td>
+                                        <div class="botao_confimacao">Confirmar Entrada</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rosana Aparecida</td>
+                                    <td>11:00</td>
+                                    <td>
+                                        <div class="botao_confimacao">Confirmar Entrada</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sidnei Sampaio</td>
+                                    <td>11:15</td>
+                                    <td>
+                                        <div class="botao_confimacao">Confirmar Entrada</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Leandro Carvalho</td>
+                                    <td>12:30</td>
+                                    <td>
+                                        <div class="botao_confimacao">Confirmar Entrada</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maria do Carmo</td>
+                                    <td>13:00</td>
+                                    <td>
+                                        <div class="botao_confimacao">Confirmar Entrada</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Antonia Carlos</td>
+                                    <td>13:15</td>
+                                    <td>
+                                        <div class="botao_confimacao">Confirmar Entrada</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="box_text">
+                    <div class="title_icon">
+                        Informações Úteis
+                    </div>
+                    <div class="box_rodape">
+                        <a href="http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/234-sgtes-p/sgtes/9630-universidade-aberta-do-sus" target="_blank">
+                            <img src="images/logo_portalsaude.png" alt="portal saude" title="portal saude">
+                        </a>
+                    </div>
+                    <div class="box_rodape">
+                        <img src="images/logo_136.png" alt="Disque saúde 136" title="Disque saúde 136">
+                    </div>
+                    <div class="box_rodape">
+                        <a href="https://portaldocidadao.saude.gov.br/portalcidadao/index.htm" target="_blank"><span class="portalSC">Portal de Saúde do Cidadão</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="limit">Sistema SUS &copy; Todos os direitos reservados</div>
+    </footer>
+
+</body>
+
+</html>

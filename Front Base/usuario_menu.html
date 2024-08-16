@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pre-triagem e Agendamento</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/atendente.css">
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/media.css" media="screen and (max-width: 780px)" />
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="limit">
+            <a href="index.html"><img src="images/sus.png" class="logo" alt=""></a>
+        </div>
+    </header>
+    <menu>
+        <div class="limit">
+            <div class="menu">
+                <b>Sistema de Pré-triagem e Agendamento</b>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="usuario_menu.html">Início</a></li>
+                <li><a href="usuario_editar_perfil.html">Editar Perfil</a></li>
+                <li><a href="usuario_fale_conosco.html">Fale Conosco</a></li>
+            </ul>
+        </div>
+    </menu>
+    <div class="content_middle">
+        <div class="limit">
+            <div class="page">
+                <div id="login">
+                   <div class="title_icon">
+                        <b>Menu</b> <span class="icon-user"></span>
+                    </div>
+                    <input onclick="window.location.href='usuario_pronto_socorro.html'" type="button" value="NOVA OCORRÊCIA" class="btn btn-primary btn_green">
+                    <input onclick="window.location.href='usuario_agendamento.html'" type="button" value="NOVO AGENDAMENTO" class="btn btn-primary btn_green">
+                    <input onclick="window.location.href='usuario_lista_ocorrencia.html'" type="button" value="LISTAR OCORRÊNCIAS" class="btn btn-primary btn_green">
+                    <input onclick="window.location.href='INDEX.html'" type="button" value="SAIR" class="btn btn-danger">
+                </div>
+
+                <div class="box_text">
+                    <div class="title_icon">
+                        Informações Úteis
+                    </div>
+                    <div class="box_rodape">
+                        <a href="http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/234-sgtes-p/sgtes/9630-universidade-aberta-do-sus" target="_blank">
+                            <img src="images/logo_portalsaude.png" alt="portal saude" title="portal saude">
+                        </a>
+                    </div>
+                    <div class="box_rodape">
+                        <img src="images/logo_136.png" alt="Disque saúde 136" title="Disque saúde 136">
+                    </div>
+                    <div class="box_rodape">
+                        <a href="https://portaldocidadao.saude.gov.br/portalcidadao/index.htm" target="_blank"><span class="portalSC">Portal de Saúde do Cidadão</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="limit">Sistema SUS &copy; Todos os direitos reservados</div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pre-triagem e Agendamento</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/media.css" media="screen and (max-width: 780px)" />
+
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="limit">
+            <a href="index.html"><img src="images/sus.png" class="logo" alt=""></a>
+        </div>
+    </header>
+    <menu>
+        <div class="limit">
+            <div class="menu">
+                <b>Sistema de Pré-triagem e Agendamento</b>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="usuario_menu.html">Início</a></li>
+                <li><a href="usuario_editar_perfil.html">Editar Perfil</a></li>
+                <li><a href="usuario_fale_conosco.html">Fale Conosco</a></li>
+                <li><a href="usuario_login.html">Sair</a></li>
+            </ul>
+        </div>
+    </menu>
+    <div class="content_middle">
+        <div class="limit">
+            <div class="page pscc">
+                <div id="atendimento">
+                    <div class="title_icon">
+                        <b>Agendamento</b> <span class="icon-ag"></span>
+                    </div>
+                    <div id="titulo_rodape">Prencha os campos do formulário abaixo realizar o agendamento de sua consulta</div>
+                    <form action="usuario_finalizacao_agendamento.html">
+                        <select name="" id="" onchange="$('#estados, #selMunicipio, .unidades').fadeOut();$('#estados').fadeIn();">
+                            <option value="">Selecione a Especialidade</option>
+                            <option value="">Cardiologia</option>
+                            <option value="">Dermatologia</option>
+                            <option value="">Endocrinologia</option>
+                            <option value="">Gastroenterologia</option>
+                            <option value="">Homeopatia</option>
+                            <option value="">Oftalmologia</option>
+                            <option value="">Ortopedia</option>
+                        </select>
+                        <select name="" id="estados" style="display:none" onchange="$('#selMunicipio, .unidades').fadeOut();$('#selMunicipio').fadeIn();">
+                            <option value="">Selecione o Estado</option>
+                            <option value="Acre">Acre</option>
+                            <option value="Alagoas">Alagoas</option>
+                            <option value="Amapá">Amapá</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Bahia">Bahia</option>
+                            <option value="Ceará">Ceará</option>
+                            <option value="Distrito Federal">Distrito Federal</option>
+                            <option value="Espírito Santo">Espírito Santo</option>
+                            <option value="Goiás">Goiás</option>
+                            <option value="Maranhão">Maranhão</option>
+                            <option value="Mato Grosso">Mato Grosso</option>
+                            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                            <option value="Minas Gerais">Minas Gerais</option>
+                            <option value="Pará">Pará</option>
+                            <option value="Paraíba">Paraíba</option>
+                            <option value="Paraná">Paraná</option>
+                            <option value="Pernambuco">Pernambuco</option>
+                            <option value="Piauí">Piauí</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                            <option value="Rondônia">Rondônia</option>
+                            <option value="Roraima">Roraima</option>
+                            <option value="Santa Catarina">Santa Catarina</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Sergipe">Sergipe</option>
+                            <option value="Tocantins">Tocantins</option>
+                        </select>
+                        <select name="" id="selMunicipio" style="display:none" onchange="$('.unidades').fadeIn();">
+                            <option value="">Município</option>
+                            <option value="">ADAMANTINA</option>
+                            <option value="">ADOLFO</option>
+                            <option value="">AGUAI</option>
+                            <option value="">AGUAS DA PRATA</option>
+                            <option value="">AGUAS DE LINDOIA</option>
+                            <option value="">AGUAS DE SANTA BARBARA</option>
+                            <option value="">AGUAS DE SAO PEDRO</option>
+                            <option value="">AGUDOS</option>
+                            <option value="">ALAMBARI</option>
+                            <option value="">ALFREDO MARCONDES</option>
+                            <option value="">ALTAIR</option>
+                            <option value="">ALTINOPOLIS</option>
+                            <option value="">ALTO ALEGRE</option>
+                            <option value="">ALUMINIO</option>
+                            <option value="">ALVARES FLORENCE</option>
+                            <option value="">ALVARES MACHADO</option>
+                            <option value="">ALVARO DE CARVALHO</option>
+                            <option value="">ALVINLANDIA</option>
+                            <option value="">AMERICANA</option>
+                            <option value="">AMERICO BRASILIENSE</option>
+                            <option value="">AMERICO DE CAMPOS</option>
+                            <option value="">AMPARO</option>
+                            <option value="">ANALANDIA</option>
+                            <option value="">ANDRADINA</option>
+                            <option value="">ANGATUBA</option>
+                            <option value="">ANHEMBI</option>
+                            <option value="">ANHUMAS</option>
+                            <option value="">APARECIDA</option>
+                            <option value="">APARECIDA D'OESTE</option>
+                            <option value="">APIAI</option>
+                            <option value="">ARACARIGUAMA</option>
+                            <option value="">ARACATUBA</option>
+                            <option value="">ARACOIABA DA SERRA</option>
+                            <option value="">ARAMINA</option>
+                            <option value="">ARANDU</option>
+                            <option value="">ARAPEI</option>
+                            <option value="">ARARAQUARA</option>
+                            <option value="">ARARAS</option>
+                            <option value="">ARCO-IRIS</option>
+                            <option value="">AREALVA</option>
+                            <option value="">AREIAS</option>
+                            <option value="">AREIOPOLIS</option>
+                            <option value="">ARIRANHA</option>
+                            <option value="">ARTUR NOGUEIRA</option>
+                            <option value="">ARUJA</option>
+                            <option value="">ASPASIA</option>
+                            <option value="">ASSIS</option>
+                            <option value="">ATIBAIA</option>
+                            <option value="">AURIFLAMA</option>
+                            <option value="">AVAI</option>
+                            <option value="">AVANHANDAVA</option>
+                            <option value="">AVARE</option>
+                            <option value="">BADY BASSITT</option>
+                            <option value="">BALBINOS</option>
+                            <option value="">BALSAMO</option>
+                            <option value="">BANANAL</option>
+                            <option value="">BARAO DE ANTONINA</option>
+                            <option value="">BARBOSA</option>
+                            <option value="">BARIRI</option>
+                            <option value="">BARRA BONITA</option>
+                            <option value="">BARRA DO CHAPEU</option>
+                            <option value="">BARRA DO TURVO</option>
+                            <option value="">BARRETOS</option>
+                            <option value="">BARRINHA</option>
+                            <option value="">BARUERI</option>
+                            <option value="">BASTOS</option>
+                            <option value="">BATATAIS</option>
+                            <option value="">BAURU</option>
+                            <option value="">BEBEDOURO</option>
+                            <option value="">BENTO DE ABREU</option>
+                            <option value="">BERNARDINO DE CAMPOS</option>
+                            <option value="">BERTIOGA</option>
+                            <option value="">BILAC</option>
+                            <option value="">BIRIGUI</option>
+                            <option value="">BIRITIBA-MIRIM</option>
+                            <option value="">BOA ESPERANCA DO SUL</option>
+                            <option value="">BOCAINA</option>
+                            <option value="">BOFETE</option>
+                            <option value="">BOITUVA</option>
+                            <option value="">BOM JESUS DOS PERDOES</option>
+                            <option value="">BOM SUCESSO DE ITARARE</option>
+                            <option value="">BORA</option>
+                            <option value="">BORACEIA</option>
+                            <option value="">BORBOREMA</option>
+                            <option value="">BOREBI</option>
+                            <option value="">BOTUCATU</option>
+                            <option value="">BRAGANCA PAULISTA</option>
+                            <option value="">BRAUNA</option>
+                            <option value="">BREJO ALEGRE</option>
+                            <option value="">BRODOWSKI</option>
+                            <option value="">BROTAS</option>
+                            <option value="">BURI</option>
+                            <option value="">BURITAMA</option>
+                            <option value="">BURITIZAL</option>
+                            <option value="">CABRALIA PAULISTA</option>
+                            <option value="">CABREUVA</option>
+                            <option value="">CACAPAVA</option>
+                            <option value="">CACHOEIRA PAULISTA</option>
+                            <option value="">CACONDE</option>
+                            <option value="">CAFELANDIA</option>
+                            <option value="">CAIABU</option>
+                            <option value="">CAIEIRAS</option>
+                            <option value="">CAIUA</option>
+                            <option value="">CAJAMAR</option>
+                            <option value="">CAJATI</option>
+                            <option value="">CAJOBI</option>
+                            <option value="">CAJURU</option>
+                            <option value="">CAMPINA DO MONTE ALEGRE</option>
+                            <option value="">CAMPINAS</option>
+                            <option value="">CAMPO LIMPO PAULISTA</option>
+                            <option value="">CAMPOS DO JORDAO</option>
+                            <option value="">CAMPOS NOVOS PAULISTA</option>
+                            <option value="">CANANEIA</option>
+                            <option value="">CANAS</option>
+                            <option value="">CANDIDO MOTA</option>
+                            <option value="">CANDIDO RODRIGUES</option>
+                            <option value="">CANITAR</option>
+                            <option value="">CAPAO BONITO</option>
+                            <option value="">CAPELA DO ALTO</option>
+                            <option value="">CAPIVARI</option>
+                            <option value="">CARAGUATATUBA</option>
+                            <option value="">CARAPICUIBA</option>
+                            <option value="">CARDOSO</option>
+                            <option value="">CASA BRANCA</option>
+                            <option value="">CASSIA DOS COQUEIROS</option>
+                            <option value="">CASTILHO</option>
+                            <option value="">CATANDUVA</option>
+                            <option value="">CATIGUA</option>
+                            <option value="">CEDRAL</option>
+                            <option value="">CERQUEIRA CESAR</option>
+                            <option value="">CERQUILHO</option>
+                            <option value="">CESARIO LANGE</option>
+                            <option value="">CHARQUEADA</option>
+                            <option value="">CHAVANTES</option>
+                            <option value="">CLEMENTINA</option>
+                            <option value="">COLINA</option>
+                            <option value="">COLOMBIA</option>
+                            <option value="">CONCHAL</option>
+                            <option value="">CONCHAS</option>
+                            <option value="">CORDEIROPOLIS</option>
+                            <option value="">COROADOS</option>
+                            <option value="">CORONEL MACEDO</option>
+                            <option value="">CORUMBATAI</option>
+                            <option value="">COSMOPOLIS</option>
+                            <option value="">COSMORAMA</option>
+                            <option value="">COTIA</option>
+                            <option value="">CRAVINHOS</option>
+                            <option value="">CRISTAIS PAULISTA</option>
+                            <option value="">CRUZALIA</option>
+                            <option value="">CRUZEIRO</option>
+                            <option value="">CUBATAO</option>
+                            <option value="">CUNHA</option>
+                            <option value="">DESCALVADO</option>
+                            <option value="">DIADEMA</option>
+                            <option value="">DIRCE REIS</option>
+                            <option value="">DIVINOLANDIA</option>
+                            <option value="">DOBRADA</option>
+                            <option value="">DOIS CORREGOS</option>
+                            <option value="">DOLCINOPOLIS</option>
+                            <option value="">DOURADO</option>
+                            <option value="">DRACENA</option>
+                            <option value="">DUARTINA</option>
+                            <option value="">DUMONT</option>
+                            <option value="">ECHAPORA</option>
+                            <option value="">ELDORADO</option>
+                            <option value="">ELIAS FAUSTO</option>
+                            <option value="">ELISIARIO</option>
+                            <option value="">EMBAUBA</option>
+                            <option value="">EMBU</option>
+                            <option value="">EMBU-GUACU</option>
+                            <option value="">EMILIANOPOLIS</option>
+                            <option value="">ENGENHEIRO COELHO</option>
+                            <option value="">ESPIRITO SANTO DO PINHAL</option>
+                            <option value="">ESPIRITO SANTO DO TURVO</option>
+                            <option value="">ESTIVA GERBI</option>
+                            <option value="">ESTRELA D'OESTE</option>
+                            <option value="">ESTRELA DO NORTE</option>
+                            <option value="">EUCLIDES DA CUNHA PAULISTA</option>
+                            <option value="">FARTURA</option>
+                            <option value="">FERNANDO PRESTES</option>
+                            <option value="">FERNANDOPOLIS</option>
+                            <option value="">FERNAO</option>
+                            <option value="">FERRAZ DE VASCONCELOS</option>
+                            <option value="">FLORA RICA</option>
+                            <option value="">FLOREAL</option>
+                            <option value="">FLORIDA PAULISTA</option>
+                            <option value="">FLORINIA</option>
+                            <option value="">FRANCA</option>
+                            <option value="">FRANCISCO MORATO</option>
+                            <option value="">FRANCO DA ROCHA</option>
+                            <option value="">GABRIEL MONTEIRO</option>
+                            <option value="">GALIA</option>
+                            <option value="">GARCA</option>
+                            <option value="">GASTAO VIDIGAL</option>
+                            <option value="">GAVIAO PEIXOTO</option>
+                            <option value="">GENERAL SALGADO</option>
+                            <option value="">GETULINA</option>
+                            <option value="">GLICERIO</option>
+                            <option value="">GUAICARA</option>
+                            <option value="">GUAIMBE</option>
+                            <option value="">GUAIRA</option>
+                            <option value="">GUAPIACU</option>
+                            <option value="">GUAPIARA</option>
+                            <option value="">GUARA</option>
+                            <option value="">GUARACAI</option>
+                            <option value="">GUARACI</option>
+                            <option value="">GUARANI D'OESTE</option>
+                            <option value="">GUARANTA</option>
+                            <option value="">GUARARAPES</option>
+                            <option value="">GUARAREMA</option>
+                            <option value="">GUARATINGUETA</option>
+                            <option value="">GUAREI</option>
+                            <option value="">GUARIBA</option>
+                            <option value="">GUARUJA</option>
+                            <option value="">GUARULHOS</option>
+                            <option value="">GUATAPARA</option>
+                            <option value="">GUZOLANDIA</option>
+                            <option value="">HERCULANDIA</option>
+                            <option value="">HOLAMBRA</option>
+                            <option value="">HORTOLANDIA</option>
+                            <option value="">IACANGA</option>
+                            <option value="">IACRI</option>
+                            <option value="">IARAS</option>
+                            <option value="">IBATE</option>
+                            <option value="">IBIRA</option>
+                            <option value="">IBIRAREMA</option>
+                            <option value="">IBITINGA</option>
+                            <option value="">IBIUNA</option>
+                            <option value="">ICEM</option>
+                            <option value="">IEPE</option>
+                            <option value="">IGARACU DO TIETE</option>
+                            <option value="">IGARAPAVA</option>
+                            <option value="">IGARATA</option>
+                            <option value="">IGUAPE</option>
+                            <option value="">ILHA COMPRIDA</option>
+                            <option value="">ILHA SOLTEIRA</option>
+                            <option value="">ILHABELA</option>
+                            <option value="">INDAIATUBA</option>
+                            <option value="">INDIANA</option>
+                            <option value="">INDIAPORA</option>
+                            <option value="">INUBIA PAULISTA</option>
+                            <option value="">IPAUSSU</option>
+                            <option value="">IPERO</option>
+                            <option value="">IPEUNA</option>
+                            <option value="">IPIGUA</option>
+                            <option value="">IPORANGA</option>
+                            <option value="">IPUA</option>
+                            <option value="">IRACEMAPOLIS</option>
+                            <option value="">IRAPUA</option>
+                            <option value="">IRAPURU</option>
+                            <option value="">ITABERA</option>
+                            <option value="">ITAI</option>
+                            <option value="">ITAJOBI</option>
+                            <option value="">ITAJU</option>
+                            <option value="">ITANHAEM</option>
+                            <option value="">ITAOCA</option>
+                            <option value="">ITAPECERICA DA SERRA</option>
+                            <option value="">ITAPETININGA</option>
+                            <option value="">ITAPEVA</option>
+                            <option value="">ITAPEVI</option>
+                            <option value="">ITAPIRA</option>
+                            <option value="">ITAPIRAPUA PAULISTA</option>
+                            <option value="">ITAPOLIS</option>
+                            <option value="">ITAPORANGA</option>
+                            <option value="">ITAPUI</option>
+                            <option value="">ITAPURA</option>
+                            <option value="">ITAQUAQUECETUBA</option>
+                            <option value="">ITARARE</option>
+                            <option value="">ITARIRI</option>
+                            <option value="">ITATIBA</option>
+                            <option value="">ITATINGA</option>
+                            <option value="">ITIRAPINA</option>
+                            <option value="">ITIRAPUA</option>
+                            <option value="">ITOBI</option>
+                            <option value="">ITU</option>
+                            <option value="">ITUPEVA</option>
+                            <option value="">ITUVERAVA</option>
+                            <option value="">JABORANDI</option>
+                            <option value="">JABOTICABAL</option>
+                            <option value="">JACAREI</option>
+                            <option value="">JACI</option>
+                            <option value="">JACUPIRANGA</option>
+                            <option value="">JAGUARIUNA</option>
+                            <option value="">JALES</option>
+                            <option value="">JAMBEIRO</option>
+                            <option value="">JANDIRA</option>
+                            <option value="">JARDINOPOLIS</option>
+                            <option value="">JARINU</option>
+                            <option value="">JAU</option>
+                            <option value="">JERIQUARA</option>
+                            <option value="">JOANOPOLIS</option>
+                            <option value="">JOAO RAMALHO</option>
+                            <option value="">JOSE BONIFACIO</option>
+                            <option value="">JULIO MESQUITA</option>
+                            <option value="">JUMIRIM</option>
+                            <option value="">JUNDIAI</option>
+                            <option value="">JUNQUEIROPOLIS</option>
+                            <option value="">JUQUIA</option>
+                            <option value="">JUQUITIBA</option>
+                            <option value="">LAGOINHA</option>
+                            <option value="">LARANJAL PAULISTA</option>
+                            <option value="">LAVINIA</option>
+                            <option value="">LAVRINHAS</option>
+                            <option value="">LEME</option>
+                            <option value="">LENCOIS PAULISTA</option>
+                            <option value="">LIMEIRA</option>
+                            <option value="">LINDOIA</option>
+                            <option value="">LINS</option>
+                            <option value="">LORENA</option>
+                            <option value="">LOURDES</option>
+                            <option value="">LOUVEIRA</option>
+                            <option value="">LUCELIA</option>
+                            <option value="">LUCIANOPOLIS</option>
+                            <option value="">LUIS ANTONIO</option>
+                            <option value="">LUIZIANIA</option>
+                            <option value="">LUPERCIO</option>
+                            <option value="">LUTECIA</option>
+                            <option value="">MACATUBA</option>
+                            <option value="">MACAUBAL</option>
+                            <option value="">MACEDONIA</option>
+                            <option value="">MAGDA</option>
+                            <option value="">MAIRINQUE</option>
+                            <option value="">MAIRIPORA</option>
+                            <option value="">MANDURI</option>
+                            <option value="">MARABA PAULISTA</option>
+                            <option value="">MARACAI</option>
+                            <option value="">MARAPOAMA</option>
+                            <option value="">MARIAPOLIS</option>
+                            <option value="">MARILIA</option>
+                            <option value="">MARINOPOLIS</option>
+                            <option value="">MARTINOPOLIS</option>
+                            <option value="">MATAO</option>
+                            <option value="">MAUA</option>
+                            <option value="">MENDONCA</option>
+                            <option value="">MERIDIANO</option>
+                            <option value="">MESOPOLIS</option>
+                            <option value="">MIGUELOPOLIS</option>
+                            <option value="">MINEIROS DO TIETE</option>
+                            <option value="">MIRA ESTRELA</option>
+                            <option value="">MIRACATU</option>
+                            <option value="">MIRANDOPOLIS</option>
+                            <option value="">MIRANTE DO PARANAPANEMA</option>
+                            <option value="">MIRASSOL</option>
+                            <option value="">MIRASSOLANDIA</option>
+                            <option value="">MOCOCA</option>
+                            <option value="">MOGI DAS CRUZES</option>
+                            <option value="">MOGI GUACU</option>
+                            <option value="">MOJI MIRIM</option>
+                            <option value="">MOMBUCA</option>
+                            <option value="">MONCOES</option>
+                            <option value="">MONGAGUA</option>
+                            <option value="">MONTE ALEGRE DO SUL</option>
+                            <option value="">MONTE ALTO</option>
+                            <option value="">MONTE APRAZIVEL</option>
+                            <option value="">MONTE AZUL PAULISTA</option>
+                            <option value="">MONTE CASTELO</option>
+                            <option value="">MONTE MOR</option>
+                            <option value="">MONTEIRO LOBATO</option>
+                            <option value="">MORRO AGUDO</option>
+                            <option value="">MORUNGABA</option>
+                            <option value="">MOTUCA</option>
+                            <option value="">MURUTINGA DO SUL</option>
+                            <option value="">NANTES</option>
+                            <option value="">NARANDIBA</option>
+                            <option value="">NATIVIDADE DA SERRA</option>
+                            <option value="">NAZARE PAULISTA</option>
+                            <option value="">NEVES PAULISTA</option>
+                            <option value="">NHANDEARA</option>
+                            <option value="">NIPOA</option>
+                            <option value="">NOVA ALIANCA</option>
+                            <option value="">NOVA CAMPINA</option>
+                            <option value="">NOVA CANAA PAULISTA</option>
+                            <option value="">NOVA CASTILHO</option>
+                            <option value="">NOVA EUROPA</option>
+                            <option value="">NOVA GRANADA</option>
+                            <option value="">NOVA GUATAPORANGA</option>
+                            <option value="">NOVA INDEPENDENCIA</option>
+                            <option value="">NOVA LUZITANIA</option>
+                            <option value="">NOVA ODESSA</option>
+                            <option value="">NOVAIS</option>
+                            <option value="">NOVO HORIZONTE</option>
+                            <option value="">NUPORANGA</option>
+                            <option value="">OCAUCU</option>
+                            <option value="">OLEO</option>
+                            <option value="">OLIMPIA</option>
+                            <option value="">ONDA VERDE</option>
+                            <option value="">ORIENTE</option>
+                            <option value="">ORINDIUVA</option>
+                            <option value="">ORLANDIA</option>
+                            <option value="">OSASCO</option>
+                            <option value="">OSCAR BRESSANE</option>
+                            <option value="">OSVALDO CRUZ</option>
+                            <option value="">OURINHOS</option>
+                            <option value="">OURO VERDE</option>
+                            <option value="">OUROESTE</option>
+                            <option value="">PACAEMBU</option>
+                            <option value="">PALESTINA</option>
+                            <option value="">PALMARES PAULISTA</option>
+                            <option value="">PALMEIRA D'OESTE</option>
+                            <option value="">PALMITAL</option>
+                            <option value="">PANORAMA</option>
+                            <option value="">PARAGUACU PAULISTA</option>
+                            <option value="">PARAIBUNA</option>
+                            <option value="">PARAISO</option>
+                            <option value="">PARANAPANEMA</option>
+                            <option value="">PARANAPUA</option>
+                            <option value="">PARAPUA</option>
+                            <option value="">PARDINHO</option>
+                            <option value="">PARIQUERA-ACU</option>
+                            <option value="">PARISI</option>
+                            <option value="">PATROCINIO PAULISTA</option>
+                            <option value="">PAULICEIA</option>
+                            <option value="">PAULINIA</option>
+                            <option value="">PAULISTANIA</option>
+                            <option value="">PAULO DE FARIA</option>
+                            <option value="">PEDERNEIRAS</option>
+                            <option value="">PEDRA BELA</option>
+                            <option value="">PEDRANOPOLIS</option>
+                            <option value="">PEDREGULHO</option>
+                            <option value="">PEDREIRA</option>
+                            <option value="">PEDRINHAS PAULISTA</option>
+                            <option value="">PEDRO DE TOLEDO</option>
+                            <option value="">PENAPOLIS</option>
+                            <option value="">PEREIRA BARRETO</option>
+                            <option value="">PEREIRAS</option>
+                            <option value="">PERUIBE</option>
+                            <option value="">PIACATU</option>
+                            <option value="">PIEDADE</option>
+                            <option value="">PILAR DO SUL</option>
+                            <option value="">PINDAMONHANGABA</option>
+                            <option value="">PINDORAMA</option>
+                            <option value="">PINHALZINHO</option>
+                            <option value="">PIQUEROBI</option>
+                            <option value="">PIQUETE</option>
+                            <option value="">PIRACAIA</option>
+                            <option value="">PIRACICABA</option>
+                            <option value="">PIRAJU</option>
+                            <option value="">PIRAJUI</option>
+                            <option value="">PIRANGI</option>
+                            <option value="">PIRAPORA DO BOM JESUS</option>
+                            <option value="">PIRAPOZINHO</option>
+                            <option value="">PIRASSUNUNGA</option>
+                            <option value="">PIRATININGA</option>
+                            <option value="">PITANGUEIRAS</option>
+                            <option value="">PLANALTO</option>
+                            <option value="">PLATINA</option>
+                            <option value="">POA</option>
+                            <option value="">POLONI</option>
+                            <option value="">POMPEIA</option>
+                            <option value="">PONGAI</option>
+                            <option value="">PONTAL</option>
+                            <option value="">PONTALINDA</option>
+                            <option value="">PONTES GESTAL</option>
+                            <option value="">POPULINA</option>
+                            <option value="">PORANGABA</option>
+                            <option value="">PORTO FELIZ</option>
+                            <option value="">PORTO FERREIRA</option>
+                            <option value="">POTIM</option>
+                            <option value="">POTIRENDABA</option>
+                            <option value="">PRACINHA</option>
+                            <option value="">PRADOPOLIS</option>
+                            <option value="">PRAIA GRANDE</option>
+                            <option value="">PRATANIA</option>
+                            <option value="">PRESIDENTE ALVES</option>
+                            <option value="">PRESIDENTE BERNARDES</option>
+                            <option value="">PRESIDENTE EPITACIO</option>
+                            <option value="">PRESIDENTE PRUDENTE</option>
+                            <option value="">PRESIDENTE VENCESLAU</option>
+                            <option value="">PROMISSAO</option>
+                            <option value="">QUADRA</option>
+                            <option value="">QUATA</option>
+                            <option value="">QUEIROZ</option>
+                            <option value="">QUELUZ</option>
+                            <option value="">QUINTANA</option>
+                            <option value="">RAFARD</option>
+                            <option value="">RANCHARIA</option>
+                            <option value="">REDENCAO DA SERRA</option>
+                            <option value="">REGENTE FEIJO</option>
+                            <option value="">REGINOPOLIS</option>
+                            <option value="">REGISTRO</option>
+                            <option value="">RESTINGA</option>
+                            <option value="">RIBEIRA</option>
+                            <option value="">RIBEIRAO BONITO</option>
+                            <option value="">RIBEIRAO BRANCO</option>
+                            <option value="">RIBEIRAO CORRENTE</option>
+                            <option value="">RIBEIRAO DO SUL</option>
+                            <option value="">RIBEIRAO DOS INDIOS</option>
+                            <option value="">RIBEIRAO GRANDE</option>
+                            <option value="">RIBEIRAO PIRES</option>
+                            <option value="">RIBEIRAO PRETO</option>
+                            <option value="">RIFAINA</option>
+                            <option value="">RINCAO</option>
+                            <option value="">RINOPOLIS</option>
+                            <option value="">RIO CLARO</option>
+                            <option value="">RIO DAS PEDRAS</option>
+                            <option value="">RIO GRANDE DA SERRA</option>
+                            <option value="">RIOLANDIA</option>
+                            <option value="">RIVERSUL</option>
+                            <option value="">ROSANA</option>
+                            <option value="">ROSEIRA</option>
+                            <option value="">RUBIACEA</option>
+                            <option value="">RUBINEIA</option>
+                            <option value="">SABINO</option>
+                            <option value="">SAGRES</option>
+                            <option value="">SALES</option>
+                            <option value="">SALES OLIVEIRA</option>
+                            <option value="">SALESOPOLIS</option>
+                            <option value="">SALMOURAO</option>
+                            <option value="">SALTINHO</option>
+                            <option value="">SALTO</option>
+                            <option value="">SALTO DE PIRAPORA</option>
+                            <option value="">SALTO GRANDE</option>
+                            <option value="">SANDOVALINA</option>
+                            <option value="">SANTA ADELIA</option>
+                            <option value="">SANTA ALBERTINA</option>
+                            <option value="">SANTA BARBARA D'OESTE</option>
+                            <option value="">SANTA BRANCA</option>
+                            <option value="">SANTA CLARA D'OESTE</option>
+                            <option value="">SANTA CRUZ DA CONCEICAO</option>
+                            <option value="">SANTA CRUZ DA ESPERANCA</option>
+                            <option value="">SANTA CRUZ DAS PALMEIRAS</option>
+                            <option value="">SANTA CRUZ DO RIO PARDO</option>
+                            <option value="">SANTA ERNESTINA</option>
+                            <option value="">SANTA FE DO SUL</option>
+                            <option value="">SANTA GERTRUDES</option>
+                            <option value="">SANTA ISABEL</option>
+                            <option value="">SANTA LUCIA</option>
+                            <option value="">SANTA MARIA DA SERRA</option>
+                            <option value="">SANTA MERCEDES</option>
+                            <option value="">SANTA RITA D'OESTE</option>
+                            <option value="">SANTA RITA DO PASSA QUATRO</option>
+                            <option value="">SANTA ROSA DE VITERBO</option>
+                            <option value="">SANTA SALETE</option>
+                            <option value="">SANTANA DA PONTE PENSA</option>
+                            <option value="">SANTANA DE PARNAIBA</option>
+                            <option value="">SANTO ANASTACIO</option>
+                            <option value="">SANTO ANDRE</option>
+                            <option value="">SANTO ANTONIO DA ALEGRIA</option>
+                            <option value="">SANTO ANTONIO DE POSSE</option>
+                            <option value="">SANTO ANTONIO DO ARACANGUA</option>
+                            <option value="">SANTO ANTONIO DO JARDIM</option>
+                            <option value="">SANTO ANTONIO DO PINHAL</option>
+                            <option value="">SANTO EXPEDITO</option>
+                            <option value="">SANTOPOLIS DO AGUAPEI</option>
+                            <option value="">SANTOS</option>
+                            <option value="">SAO BENTO DO SAPUCAI</option>
+                            <option value="">SAO BERNARDO DO CAMPO</option>
+                            <option value="">SAO CAETANO DO SUL</option>
+                            <option value="">SAO CARLOS</option>
+                            <option value="">SAO FRANCISCO</option>
+                            <option value="">SAO JOAO DA BOA VISTA</option>
+                            <option value="">SAO JOAO DAS DUAS PONTES</option>
+                            <option value="">SAO JOAO DE IRACEMA</option>
+                            <option value="">SAO JOAO DO PAU D'ALHO</option>
+                            <option value="">SAO JOAQUIM DA BARRA</option>
+                            <option value="">SAO JOSE DA BELA VISTA</option>
+                            <option value="">SAO JOSE DO BARREIRO</option>
+                            <option value="">SAO JOSE DO RIO PARDO</option>
+                            <option value="">SAO JOSE DO RIO PRETO</option>
+                            <option value="">SAO JOSE DOS CAMPOS</option>
+                            <option value="">SAO LOURENCO DA SERRA</option>
+                            <option value="">SAO LUIS DO PARAITINGA</option>
+                            <option value="">SAO MANUEL</option>
+                            <option value="">SAO MIGUEL ARCANJO</option>
+                            <option value="">SAO PAULO</option>
+                            <option value="">SAO PEDRO</option>
+                            <option value="">SAO PEDRO DO TURVO</option>
+                            <option value="">SAO ROQUE</option>
+                            <option value="">SAO SEBASTIAO</option>
+                            <option value="">SAO SEBASTIAO DA GRAMA</option>
+                            <option value="">SAO SIMAO</option>
+                            <option value="">SAO VICENTE</option>
+                            <option value="">SARAPUI</option>
+                            <option value="">SARUTAIA</option>
+                            <option value="">SEBASTIANOPOLIS DO SUL</option>
+                            <option value="">SERRA AZUL</option>
+                            <option value="">SERRA NEGRA</option>
+                            <option value="">SERRANA</option>
+                            <option value="">SERTAOZINHO</option>
+                            <option value="">SETE BARRAS</option>
+                            <option value="">SEVERINIA</option>
+                            <option value="">SILVEIRAS</option>
+                            <option value="">SOCORRO</option>
+                            <option value="">SOROCABA</option>
+                            <option value="">SUD MENNUCCI</option>
+                            <option value="">SUMARE</option>
+                            <option value="">SUZANAPOLIS</option>
+                            <option value="">SUZANO</option>
+                            <option value="">TABAPUA</option>
+                            <option value="">TABATINGA</option>
+                            <option value="">TABOAO DA SERRA</option>
+                            <option value="">TACIBA</option>
+                            <option value="">TAGUAI</option>
+                            <option value="">TAIACU</option>
+                            <option value="">TAIUVA</option>
+                            <option value="">TAMBAU</option>
+                            <option value="">TANABI</option>
+                            <option value="">TAPIRAI</option>
+                            <option value="">TAPIRATIBA</option>
+                            <option value="">TAQUARAL</option>
+                            <option value="">TAQUARITINGA</option>
+                            <option value="">TAQUARITUBA</option>
+                            <option value="">TAQUARIVAI</option>
+                            <option value="">TARABAI</option>
+                            <option value="">TARUMA</option>
+                            <option value="">TATUI</option>
+                            <option value="">TAUBATE</option>
+                            <option value="">TEJUPA</option>
+                            <option value="">TEODORO SAMPAIO</option>
+                            <option value="">TERRA ROXA</option>
+                            <option value="">TIETE</option>
+                            <option value="">TIMBURI</option>
+                            <option value="">TORRE DE PEDRA</option>
+                            <option value="">TORRINHA</option>
+                            <option value="">TRABIJU</option>
+                            <option value="">TREMEMBE</option>
+                            <option value="">TRES FRONTEIRAS</option>
+                            <option value="">TUIUTI</option>
+                            <option value="">TUPA</option>
+                            <option value="">TUPI PAULISTA</option>
+                            <option value="">TURIUBA</option>
+                            <option value="">TURMALINA</option>
+                            <option value="">UBARANA</option>
+                            <option value="">UBATUBA</option>
+                            <option value="">UBIRAJARA</option>
+                            <option value="">UCHOA</option>
+                            <option value="">UNIAO PAULISTA</option>
+                            <option value="">URANIA</option>
+                            <option value="">URU</option>
+                            <option value="">URUPES</option>
+                            <option value="">VALENTIM GENTIL</option>
+                            <option value="">VALINHOS</option>
+                            <option value="">VALPARAISO</option>
+                            <option value="">VARGEM</option>
+                            <option value="">VARGEM GRANDE DO SUL</option>
+                            <option value="">VARGEM GRANDE PAULISTA</option>
+                            <option value="">VARZEA PAULISTA</option>
+                            <option value="">VERA CRUZ</option>
+                            <option value="">VINHEDO</option>
+                            <option value="">VIRADOURO</option>
+                            <option value="">VISTA ALEGRE DO ALTO</option>
+                            <option value="">VITORIA BRASIL</option>
+                            <option value="">VOTORANTIM</option>
+                            <option value="">VOTUPORANGA</option>
+                            <option value="">ZACARIAS</option>
+                        </select>
+                        <div class="unidades">
+                            <h1>Clique sobre a unidade para selecionar</h1>
+                            <div class="listuni" onclick="listuni($(this))">
+                                <span class="icon-unidade"></span>
+                                <h1>Nome da Unidade do Tatuapé</h1> Rua Azevedo Soares nº 2345 - São Paulo - SP CEP: 03322-002
+                            </div>
+                            <div class="listuni" onclick="listuni($(this))">
+                                <span class="icon-unidade"></span>
+                                <h1>Nome da Unidade do Carrão</h1> Rua Ana de Proença nº 109 - São Paulo - SP CEP: 03409-040
+                            </div>
+                            <div class="listuni" onclick="listuni($(this))">
+                                <span class="icon-unidade"></span>
+                                <h1>Nome da Unidade da Vila Formosa</h1> Rua Forte do Calvário nº 127 - São Paulo - SP CEP: 03322-002
+                            </div>
+                            <input type="date" onchange="showhi($(this).val())" class="dataunidade">
+                            <select name="" id="hora">
+                                <option value="">horários disponíveis</option>
+                                <option value="">8h30</option>
+                                <option value="">9h30</option>
+                                <option value="">10h00</option>
+                                <option value="">14h30</option>
+                                <option value="">15h00</option>
+                                <option value="">15h30</option>
+                                <option value="">17h30</option>
+                            </select>
+                            <div class="alert" id="hi">
+                                <span class="icon-sad"></span> <h1>Desculpe</h1>Nenhum horário disponível para essa data                                
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-primary btn_blue" value="Continuar">
+                    </form>
+
+                </div>
+                <div class="box_text">
+                    <div class="title_icon">
+                        Informações Úteis
+                    </div>
+                    <div class="box_rodape">
+                        <a href="http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/234-sgtes-p/sgtes/9630-universidade-aberta-do-sus" target="_blank">
+                            <img src="images/logo_portalsaude.png" alt="portal saude" title="portal saude">
+                        </a>
+                    </div>
+                    <div class="box_rodape">
+                        <img src="images/logo_136.png" alt="Disque saúde 136" title="Disque saúde 136">
+                    </div>
+                    <div class="box_rodape">
+                        <a href="https://portaldocidadao.saude.gov.br/portalcidadao/index.htm" target="_blank"><span class="portalSC">Portal de Saúde do Cidadão</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="limit">Sistema SUS &copy; Todos os direitos reservados</div>
+        </footer>
+
+</body>
+
+</html>

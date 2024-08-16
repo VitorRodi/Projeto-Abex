@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pre-triagem e Agendamento</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/atendente.css">
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <div class="main_bg_panel"></div>
+    <div class="help_panel">
+        <div class="help_content">
+            <span class="close">x</span>
+            <br><br><br><br><br>Faça a leitura do código de barras com o periférico no campo abaixo
+            <input  onkeyup="if($(this).val().length >= 20){ window.location.href='imprimir.html' }" id="recebecodigo" type="text" placeholder="Clique aqui">
+        </div>
+    </div>
+    <header>
+        <div class="limit">
+            <a href="index.html"><img src="images/sus.png" class="logo" alt=""></a>
+        </div>
+    </header>
+    <menu>
+        <div class="limit">
+            <div class="menu">
+                <b>Sistema de Pré-triagem e Agendamento</b>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="atendente_desktop.html">Desktop</a></li>
+                <li><a href="atendente_agenda_especialidade.html">Agenda por Especialidade</a></li>
+                <li><a href="atendente_pronto_socorro.html">Tabela Completa de Pronto Socorro</a></li>
+                <li><a href="atendente_troca_senha.html">Trocar Senha</a></li>
+                <li>
+                    <a href="atendente_login.html">
+                        <spam id="sair">Sair</spam>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </menu>
+    <div class="content_middle">
+        <div class="limit">
+            <div class="page">
+                <div class="row" id="menu_usuario">
+                    <div class="col-md-6" id="proximos_atendimentos">
+                        <div id="box_proximos_atendimentos">Proximas Consultas Agendados</div>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <th>Horário</th>
+                                <th>Paciente</th>
+                                <th>Doutor</th>
+                                <th>Confirmação de Entrada</th>
+                            </thead>
+                            <tbody>
+                                <td>09:40</td>
+                                <td>Carlos Eduardo</td>
+                                <td>Evandro</td>
+                                <td>
+                                    <div class="botao_confimacao">Confirmar Entrada</div>
+                                </td>
+                            </tbody>
+                            <tbody>
+                                <td>10:15</td>
+                                <td>Maria Claudia</td>
+                                <td>Samantha</td>
+                                <td>
+                                    <div class="botao_confimacao">Confirmar Entrada</div>
+                                </td>
+                            </tbody>
+                            <tbody>
+                                <td>10:30</td>
+                                <td>Robson Caetano</td>
+                                <td>Amanda</td>
+                                <td>
+                                    <div class="botao_confimacao">Confirmar Entrada</div>
+                                </td>
+                            </tbody>
+                            <tbody>
+                                <td>10:40</td>
+                                <td>Luis Gustavo</td>
+                                <td>Gabriel</td>
+                                <td>
+                                    <div class="botao_confimacao">Confirmar Entrada</div>
+                                </td>
+                            </tbody>
+                            <tbody>
+                                <td>11:00</td>
+                                <td>Paulo Adriano</td>
+                                <td>Cristina</td>
+                                <td>
+                                    <div class="botao_confimacao">Confirmar Entrada</div>
+                                </td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="proximos_ps">
+                            <div id="box_proximos_ps">Entrada no Pronto Socorro</div></BR>
+                        <B>Selecione uma das opções abaixo para dar a entrada do paciente no pronto socorro.</B> </br>
+                            <div class="box_triagem">
+                            <input type="text" placeholder="*RG">
+                        </div></br>
+                            <div class="box_triagem">
+                            <input type="text" placeholder="*Codigo De Atendimento">
+                        </div></br>
+                            <input onclick="window.location.href='imprimir.html'" type="button" value="IMPRIMIR TRIAGEM" class="btn">
+                            <input onclick="help();$('#recebecodigo').val('')" type="button" value="LEITOR DE QR CODE" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box_text">
+                    <div class="title_icon">
+                        Informações Úteis
+                    </div>
+                    <div class="box_rodape">
+                        <a href="http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/234-sgtes-p/sgtes/9630-universidade-aberta-do-sus" target="_blank">
+                            <img src="images/logo_portalsaude.png" alt="portal saude" title="portal saude">
+                        </a>
+                    </div>
+                    <div class="box_rodape">
+                        <img src="images/logo_136.png" alt="Disque saúde 136" title="Disque saúde 136">
+                    </div>
+                    <div class="box_rodape">
+                        <a href="https://portaldocidadao.saude.gov.br/portalcidadao/index.htm" target="_blank"><span class="portalSC">Portal de Saúde do Cidadão</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="limit">Sistema SUS &copy; Todos os direitos reservados</div>
+    </footer>
+
+</body>
+
+</html>

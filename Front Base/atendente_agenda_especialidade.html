@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pre-triagem e Agendamento</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/atendente.css">
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="limit">
+            <a href="index.html"><img src="images/sus.png" class="logo" alt=""></a>
+        </div>
+    </header>
+    <menu>
+        <div class="limit">
+            <div class="menu">
+                <b>Sistema de Pré-triagem e Agendamento</b>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="atendente_desktop.html">Desktop</a></li>
+                <li><a href="atendente_agenda_especialidade.html" class="pagina_atual">Agenda por Especialidade</a></li>
+                <li><a href="atendente_pronto_socorro.html">Tabela Completa de Pronto Socorro</a></li>
+                <li><a href="atendente_troca_senha.html">Trocar Senha</a></li>
+                <li>
+                    <a href="atendente_login.html">
+                        <spam id="sair">Sair</spam>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </menu>
+    <div class="content_middle">
+        <div class="limit">
+            <div class="page">
+                <div class="page pscc">
+                    <div id="agenda">
+
+                        <div id="sel_especialidade">
+                            <spam>Selecione a Especialidade desejada</spam>
+                            <select onchange="showtable($(this).val())">
+                                <Option>*Selecione*</option>
+                                <Option value="ortopedia">Ortopedista</option>
+                                <Option value="pediatria">Pediatria</option>
+                                <Option value="Dermatologista">Dermatologista</option>
+                                <Option value="Nutricionista">Nutricionista</option>
+                                <Option value="fisioterapeuta">Fisioterapeuta</option>
+                            </select>
+
+                        </div>
+                        <div id="sel_data">
+                            <spam>Data:</spam>
+                            <input type="date">
+                        </div>
+                        <div id="agendamentos" data-especialidade="ortopedia">
+                            <div class="especialidade">Ortopedista</div>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Doutor</th>
+                                        <th>08:00</th>
+                                        <th>09:00</th>
+                                        <th>10:00</th>
+                                        <th>11:00</th>
+                                        <th>12:00</th>
+                                        <th>13:00</th>
+                                        <th>14:00</th>
+                                        <th>15:00</th>
+                                        <th>16:00</th>
+                                        <th>17:00</th>
+                                        <th>18:00</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Carlos</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Samantha</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ewerton</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Adriana</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cristina</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="agendamentos" data-especialidade="pediatria">
+                            <div class="especialidade">Pediatria</div>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Doutor</th>
+                                        <th>08:00</th>
+                                        <th>09:00</th>
+                                        <th>10:00</th>
+                                        <th>11:00</th>
+                                        <th>12:00</th>
+                                        <th>13:00</th>
+                                        <th>14:00</th>
+                                        <th>15:00</th>
+                                        <th>16:00</th>
+                                        <th>17:00</th>
+                                        <th>18:00</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Amanda</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gabriel</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Robson</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maria Clara</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rodrigo</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="agendamentos" data-especialidade="Dermatologista">
+                            <div class="especialidade">Dermatologista</div>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Doutor</th>
+                                        <th>08:00</th>
+                                        <th>09:00</th>
+                                        <th>10:00</th>
+                                        <th>11:00</th>
+                                        <th>12:00</th>
+                                        <th>13:00</th>
+                                        <th>14:00</th>
+                                        <th>15:00</th>
+                                        <th>16:00</th>
+                                        <th>17:00</th>
+                                        <th>18:00</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Daniel</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rodolfo</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luisa</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"> </td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"> </td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fernanda</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Caroline</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="agendamentos" data-especialidade="Nutricionista">
+                            <div class="especialidade">Nutricionista</div>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Doutor</th>
+                                        <th>08:00</th>
+                                        <th>09:00</th>
+                                        <th>10:00</th>
+                                        <th>11:00</th>
+                                        <th>12:00</th>
+                                        <th>13:00</th>
+                                        <th>14:00</th>
+                                        <th>15:00</th>
+                                        <th>16:00</th>
+                                        <th>17:00</th>
+                                        <th>18:00</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Nathalia</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Renata</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marcos</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Antônio</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thiago</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="agendamentos" data-especialidade="fisioterapeuta">
+                            <div class="especialidade">Fisioterapeuta</div>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Doutor</th>
+                                        <th>08:00</th>
+                                        <th>09:00</th>
+                                        <th>10:00</th>
+                                        <th>11:00</th>
+                                        <th>12:00</th>
+                                        <th>13:00</th>
+                                        <th>14:00</th>
+                                        <th>15:00</th>
+                                        <th>16:00</th>
+                                        <th>17:00</th>
+                                        <th>18:00</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bruno</td>
+                                        <td class="efeito "></td>
+                                        <td class="efeito "></td>
+                                        <td class="efeito "></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito folga"></td>
+                                        <td class="efeito folga"></td>
+                                        <td class="efeito cancelado"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito "></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pamela</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito cancelado"></td>
+                                        <td class="efeito cancelado"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Leandro</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito folga"></td>
+                                        <td class="efeito folga"></td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito cancelado"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vinicius</td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito folga"></td>
+                                        <td class="efeito folga"></td>
+                                        <td class="efeito cancelado"></td>
+                                        <td class="efeito cancelado"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lucas</td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito folga"></td>
+                                        <td class="efeito folga"></td>
+                                        <td class="efeito cancelado"></td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito marcado"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                        <td class="efeito"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="legendas">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Legendas</th>
+                                            <th>Cores</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Consulta Marcada</td>
+                                            <td class="marcado"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Horário Vago</td>
+                                            <td class="vago"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Folga/Intervalo</td>
+                                            <td class="folga"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Consulta Cancelada</td>
+                                            <td class="cancelado"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_text">
+                        <div class="title_icon">
+                            Informações Úteis
+                        </div>
+                        <div class="box_rodape">
+                            <a href="http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/234-sgtes-p/sgtes/9630-universidade-aberta-do-sus" target="_blank">
+                                <img src="images/logo_portalsaude.png" alt="portal saude" title="portal saude">
+                            </a>
+                        </div>
+                        <div class="box_rodape">
+                            <img src="images/logo_136.png" alt="Disque saúde 136" title="Disque saúde 136">
+                        </div>
+                        <div class="box_rodape">
+                            <a href="https://portaldocidadao.saude.gov.br/portalcidadao/index.htm" target="_blank"><span class="portalSC">Portal de Saúde do Cidadão</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="limit">Sistema SUS &copy; Todos os direitos reservados</div>
+        </footer>
+
+</body>
+
+</html>

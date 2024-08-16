@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pre-triagem e Agendamento</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/media.css" media="screen and (max-width: 780px)" />
+
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="limit">
+            <a href="index.html"><img src="images/sus.png" class="logo" alt=""></a>
+        </div>
+    </header>
+    <menu>
+        <div class="limit">
+            <div class="menu">
+                <b>Sistema de Pré-triagem e Agendamento</b>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="usuario_menu.html">Início</a></li>
+                <li><a href="usuario_editar_perfil.html">Editar Perfil</a></li>
+                <li><a href="usuario_fale_conosco.html">Fale Conosco</a></li>
+                <li><a href="usuario_login.html">Sair</a></li>
+            </ul>
+        </div>
+    </menu>
+    <div class="content_middle">
+        <div class="limit">
+            <div class="page pscc">
+                <div id="atendimento">
+                    <div class="title_icon">
+                        <b>Pronto Socorro</b> <span class="icon-ps"></span>
+                    </div>
+                    <div id="titulo_rodape">Prencha os campos do formulário abaixo com as informações pessoais</div>
+                    <form action="usuario_finalizacao.html" id="fomrps" onsubmit="return false">
+                        <div class="box_triagem">
+                            <input type="number" id="rg" placeholder="*RG">
+                        </div>
+                        <div class="box_triagem">
+                            <input type="text" placeholder="Celular">
+                        </div>
+                        <div class="box_triagem">
+                            <input type="text" placeholder="Número do SUS">
+                        </div>
+                        <h4>Pré-triagem</h4>
+                        <div class="box_sintomas">
+                            <div class="space_line">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                    <span class="textbarprogress">Passo <span id="step_text">1</span> de 7</span>
+                                </div>
+                            </div>
+                            <div class="passo1">
+
+                                <div class="form-group">
+                                    <select onchange="if($(this).val()=='feminino'){ $('.gf').fadeIn(); $('#gestante1').attr('data-obrigatorio','true'); $('#gestante2').attr('data-obrigatorio','true'); }else{ $('.gf').hide(); $('#gestante1').attr('data-obrigatorio','false'); $('#gestante2').attr('data-obrigatorio','false'); }" name="Sexo" data-obrigatorio="true">
+                                        <option value="">Sexo</option>
+                                        <option value="feminino">Feminino</option>
+                                        <option value="masculino">Masculino</option>
+                                    </select>
+                                </div>
+                                <div class="gf">
+                                    <div class="form-group">
+                                        <label>Está gestante?</label>
+                                        <br>
+                                        <input type="radio" id="gestante1" name="Gestante" data-obrigatorio="false" onclick="$('#mes').attr('data-obrigatorio','true');$('#semana').attr('data-obrigatorio','true');" value="Sim"> Sim
+                                        <input type="radio" id="gestante2" name="Gestante" data-obrigatorio="false" onclick="$('#mes').attr('data-obrigatorio','false');$('#semana').attr('data-obrigatorio','false');" value="Não"> Não
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Se sim, qual a maternidade de referência?</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Meses:</label>
+                                        <select id="mes" name="Meses" data-obrigatorio="false">
+                                            <option value="">*Selecione*</option>
+                                            <option value="1 mês">1 mês</option>
+                                            <option value="2 meses">2 meses</option>
+                                            <option value="3 meses">3 meses</option>
+                                            <option value="4 meses">4 meses</option>
+                                            <option value="5 meses">5 meses</option>
+                                            <option value="6 meses">6 meses</option>
+                                            <option value="7 meses">7 meses</option>
+                                            <option value="8 meses">8 meses</option>
+                                            <option value="9 meses">9 meses</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Semanas:</label>
+                                        <select id="semana" data-obrigatorio="false" name="Semanas">
+                                            <option value="">*Selecione*</option>
+                                            <option valeu="1 semana">1 semana</option>
+                                            <option valeu="2 semana">2 semanas</option>
+                                            <option valeu="3 semana">3 semanas</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="passo2">
+                                <div class="form-group">
+                                    <label>Sobre seu peso, você se considera?</label>
+                                    <br>
+                                    <select name="Peso" id="" data-obrigatorio="true">
+                                        <option value="">Selecione</option>
+                                        <option value="Acima do Peso">Acima do Peso</option>
+                                        <option value="Peso adequado">Peso adequado</option>
+                                        <option value="Abaixo do peso">Abaixo do peso</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Está fumante?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="fumante" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="fumante" valeu="Não">Não
+                                </div>
+                                <div class="form-group">
+                                    <label>Está dependente ou usa outras drogas?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="outras drogas" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="outras drogas" valeu="Não">Não
+                                </div>
+                                <div class="form-group">
+                                    <label>Tem hipertensão arterial?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="hipertensão" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="hipertensão" valeu="Não">Não
+                                </div>
+                            </div>
+
+
+                            <div class="passo3">
+                                <div class="form-group">
+                                    <label>Tem diabetes?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="diabetes" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="diabetes" valeu="Não">Não
+                                </div>
+                                <div class="form-group">
+                                    <label>Teve AVC/Derrame?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="avc" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="avc" valeu="Não">Não
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Teve infarto?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="infarto" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="infarto" valeu="Não">Não
+                                </div>
+                                <div class="form-group">
+                                    <label>Tem doenças cardíacas/do coração?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="doenças cardíacas" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="doenças cardíacas" valeu="Não">Não
+                                </div>
+
+                            </div>
+                            <div class="passo4">
+                                <div class="form-group">
+                                    <label>Tem ou teve problemas nos rins?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="rins" onclick="$('#sick_rim').fadeIn();$('#sick_rim_text').attr('data-obrigatorio','true');" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="rins" onclick="$('#sick_rim').fadeOut();$('#sick_rim_text').attr('data-obrigatorio','false');" valeu="Não">Não
+                                </div>
+                                <div id="sick_rim" style="display:none;" class="form-group">
+                                    <label>Quais problemas nos rins?</label>
+                                    <input id="sick_rim_text" type="text" data-obrigatorio="false" name="Problemas nos rins">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tem doença respiratória?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="doença respiratória" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="doença respiratória" valeu="Não">Não
+                                </div>
+                                <div class="form-group">
+                                    <label>Está com Hanseníase?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="Hanseníase" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="Hanseníase" valeu="Não">Não
+                                </div>
+                                <div class="form-group">
+                                    <label>Está com Tuberculose?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="Tuberculose" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="Tuberculose" valeu="Não">Não
+                                </div>
+
+                            </div>
+                            <div class="passo5">
+                                <div class="form-group">
+                                    <label>Tem ou teve câncer?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="cancer" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="cancer" valeu="Não">Não
+                                </div>
+                                <div class="form-group">
+                                    <label>Teve alguma internação nos últimos 12 meses?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="internacao" onclick="$('#sick_int').fadeIn();$('#sick_int_text').attr('data-obrigatorio','true');" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="internacao" onclick="$('#sick_int').fadeOut();$('#sick_int_text').attr('data-obrigatorio','false');" valeu="Não">Não
+                                </div>
+                                <div id="sick_int" style="display:none;" class="form-group">
+                                    <label>Qual a causa da internação?</label>
+                                    <input type="text" id="sick_int_text" data-obrigatorio="false" name="Causa da internação">
+                                </div>
+                                <div class="form-group">
+                                    <label>Fez ou faz tratamento com psiquiatra ou teve internação por problema de saúde mental?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="saúde mental" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="saúde mental" valeu="Não">Não
+                                </div>
+                            </div>
+                            <div class="passo6">
+                                <div class="form-group">
+                                    <label>Está acamado?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="acamado" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="acamado" valeu="Não">Não
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Está domiciliado?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="domiciliado" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="domiciliado" valeu="Não">Não
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Usa plantas medicinais?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="plantas medicinais" onclick="$('#sick_pla').fadeIn();$('#sick_pla_text').attr('data-obrigatorio','true');" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="plantas medicinais" onclick="$('#sick_pla').fadeOut();$('#sick_pla_text').attr('data-obrigatorio','false');" valeu="Não">Não
+                                </div>
+
+                                <div id="sick_pla" style="display:none;" class="form-group">
+                                    <label>Quais plantas?</label>
+                                    <input type="text" data-obrigatorio="false" id="sick_pla_text" name="Quais Plantas">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Usa outras praticas integrativas e complementares?</label>
+                                    <br>
+                                    <input type="radio" data-obrigatorio="true" name="outras praticas" valeu="Sim">Sim
+                                    <input type="radio" data-obrigatorio="true" name="outras praticas" valeu="Não">Não
+                                </div>
+                            </div>
+                            <div class="passo7">
+                                <div class="space_line">Outras condições (sintomas) de saúde:
+                                    <textarea name="" id=""></textarea>
+                                </div>
+
+                            </div>
+                            <div class="nav_sintomas">
+                                <input type="hidden" value="1" id="step">
+                                <input type="button" onclick="show_steps($('#step').val(), 'prev')" class="btn btn-info" id="voltar" value="VOLTAR">
+                                <input type="button" onclick="show_steps($('#step').val(), 'next')" class="btn btn-success" id="continuar" value="CONTINUAR">
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+                <div class="box_text">
+                    <div class="title_icon">
+                        Informações Úteis
+                    </div>
+                    <div class="box_rodape">
+                        <a href="http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/234-sgtes-p/sgtes/9630-universidade-aberta-do-sus" target="_blank">
+                            <img src="images/logo_portalsaude.png" alt="portal saude" title="portal saude">
+                        </a>
+                    </div>
+                    <div class="box_rodape">
+                        <img src="images/logo_136.png" alt="Disque saúde 136" title="Disque saúde 136">
+                    </div>
+                    <div class="box_rodape">
+                        <a href="https://portaldocidadao.saude.gov.br/portalcidadao/index.htm" target="_blank"><span class="portalSC">Portal de Saúde do Cidadão</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="limit">Sistema SUS &copy; Todos os direitos reservados</div>
+        </footer>
+
+</body>
+
+</html>
